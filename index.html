@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fafafa;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      flex: 1;
+      max-width: 220px;
+      padding-right: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      padding: 10px 0;
+      font-size: 16px;
+    }
+
+    .nav-links i {
+      margin-right: 10px;
+    }
+
+    /* Feed */
+    .feed {
+      flex: 2;
+    }
+
+    .post {
+      background: white;
+      border: 1px solid #ddd;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .post-header img {
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .post-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .post-actions {
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    .post-actions i {
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    .post-caption {
+      padding: 0 10px 10px;
+    }
+
+    /* Suggestions */
+    .suggestions {
+      flex: 1;
+      max-width: 300px;
+      padding-left: 20px;
+      display: none;
+    }
+
+    .profile-suggestion {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .profile-suggestion img {
+      border-radius: 50%;
+      margin-right: 10px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .profile-suggestion div {
+      flex: 1;
+    }
+
+    .profile-suggestion button {
+      background: none;
+      color: #0095f6;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .gray {
+      color: gray;
+      font-size: 12px;
+    }
+
+    /* Show suggestions on wider screens */
+    @media screen and (min-width: 900px) {
+      .suggestions {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">Instagram</div>
+      <nav class="nav-links">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-search"></i> Search</a>
+        <a href="#"><i class="far fa-compass"></i> Explore</a>
+        <a href="#"><i class="far fa-paper-plane"></i> Messages</a>
+        <a href="#"><i class="far fa-heart"></i> Notifications</a>
+        <a href="#"><i class="far fa-plus-square"></i> Create</a>
+        <a href="#"><i class="far fa-user-circle"></i> Profile</a>
+      </nav>
+    </aside>
+
+    <!-- Feed -->
+    <main class="feed">
+      <div class="post">
+        <div class="post-header">
+          <img src="https://i.pravatar.cc/40" alt="User"/>
+          <span>john_doe</span>
+        </div>
+        <img class="post-image" src="https://source.unsplash.com/random/800x600" alt="Post"/>
+        <div class="post-actions">
+          <i class="far fa-heart"></i>
+          <i class="far fa-comment"></i>
+          <i class="far fa-paper-plane"></i>
+        </div>
+        <div class="post-caption">
+          <strong>john_doe</strong> Loving the view!
+        </div>
+      </div>
+    </main>
+
+    <!-- Suggestions -->
+    <aside class="suggestions">
+      <div class="profile-suggestion">
+        <img src="https://i.pravatar.cc/50?img=2" alt="Profile"/>
+        <div>
+          <p><strong>jane_doe</strong></p>
+          <p class="gray">Suggested for you</p>
+        </div>
+        <button>Follow</button>
+      </div>
+      <div class="profile-suggestion">
+        <img src="https://i.pravatar.cc/50?img=3" alt="Profile"/>
+        <div>
+          <p><strong>alex123</strong></p>
+          <p class="gray">Suggested for you</p>
+        </div>
+        <button>Follow</button>
+      </div>
+    </aside>
+
+  </div>
+
+</body>
+</html>
